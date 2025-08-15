@@ -78,6 +78,7 @@ export function WarpGenerator() {
         </Button>
 
         {!isGenerated ? (
+          /*
           <div className="relative">
             {siteMode === "specific" && (
               <Badge
@@ -113,6 +114,7 @@ export function WarpGenerator() {
               </DialogContent>
             </Dialog>
           </div>
+          */
         ) : (
           <Button onClick={handleReset} variant="outline" size="icon">
             <RefreshCw className="h-4 w-4" />
