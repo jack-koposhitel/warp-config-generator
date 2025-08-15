@@ -58,7 +58,7 @@ export function WarpGenerator() {
 
   const copyConfig = () => {
     if (configData) {
-      navigator.clipboard.writeText(configData)
+      navigator.clipboard.writeText(atob(configData.configBase64))
     }
   }
 
