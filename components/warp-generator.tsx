@@ -56,6 +56,12 @@ export function WarpGenerator() {
     }
   }
 
+  const copyConfig = () => {
+    if (configData) {
+      navigator.clipboard.writeText(configData)
+    }
+  }
+
   const downloadConfig = () => {
     if (configData) {
       const link = document.createElement("a")
@@ -125,13 +131,16 @@ export function WarpGenerator() {
       {status && <p className="text-sm text-muted-foreground">{status}</p>}
       {configData && isGenerated && (
         <div className="flex gap-2">
-          <Button onClick={downloadConfig} className="flex-[0.7]">
-            Скачать конфиг
+          <Button onClick={copyConfig} className="flex-[0.4]">
+            Скопировать
+          </Button>
+          <Button onClick={downloadConfig} className="flex-[0.35]">
+            Скачать
           </Button>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" className="flex-[0.3]">
-                QR код
+              <Button variant="outline" className="flex-[0.25]">
+                QR
               </Button>
             </DialogTrigger>
             <DialogContent className="config-dialog sm:max-w-[425px]">
