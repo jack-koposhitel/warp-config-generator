@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog"
 import { Settings, RefreshCw, X } from "lucide-react"
 import Image from "next/image"
-//import { ConfigOptions } from "./config-options"
+import { ConfigOptions } from "./config-options"
 import { Badge } from "@/components/ui/badge"
 
 export function WarpGenerator() {
