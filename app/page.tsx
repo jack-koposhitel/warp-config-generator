@@ -9,30 +9,9 @@ export default function Home() {
     <>
       <Analytics/>
       <main className="flex min-h-screen flex-col items-center justify-center p-4 w-full">
-        <Alert className="alert mb-6 break-words">
-          <AlertTitle>Mirrors</AlertTitle>
-          <AlertDescription className="break-words">
-            Сделал сайт с зеркалами этого сайта на случай, если он перестанет работать:{" "}
-            <a href="https://warp-mirrors.vercel.app" className="font-medium">
-              warp-mirrors.vercel.app
-            </a>
-          </AlertDescription>
-        </Alert>
         <div className="flex flex-col items-center justify-center gap-6 w-[300px]">
           <Image src="/logo.svg" alt="Логотип" width={300} height={300}/>
           <WarpGenerator/>
-          <Button asChild className="w-full">
-            <a href="https://t.me/warp_generator_bot">Warp Generator Bot</a>
-          </Button>
-          <Button asChild className="w-full">
-            <a href="https://t.me/+fDYczngHDFplZDli">Telegram канал</a>
-          </Button>
-          <Button asChild className="w-full">
-            <a href="https://github.com/nellimonix/warp-config-generator-vercel">GitHub репозиторий</a>
-          </Button>
-          <p className="text-sm text-muted-foreground">
-            Пожалуйста, поддержите меня на GitHub, поставив звезду.
-          </p>
         </div>
       </main>
     </>
