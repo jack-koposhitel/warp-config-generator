@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog"
 import { Settings, RefreshCw, X } from "lucide-react"
 import Image from "next/image"
-import { ConfigOptions } from "./config-options"
+//import { ConfigOptions } from "./config-options"
 import { Badge } from "@/components/ui/badge"
 
 export function WarpGenerator() {
@@ -83,8 +83,7 @@ export function WarpGenerator() {
           {isLoading ? "Генерация..." : "Сгенерировать"}
         </Button>
 
-        {!isGenerated ? (
-          /*
+        {/*!isGenerated ? (
           <div className="relative">
             {siteMode === "specific" && (
               <Badge
@@ -120,12 +119,11 @@ export function WarpGenerator() {
               </DialogContent>
             </Dialog>
           </div>
-          */
         ) : (
           <Button onClick={handleReset} variant="outline" size="icon">
             <RefreshCw className="h-4 w-4" />
           </Button>
-        )}
+        )*/}
       </div>
 
       {status && <p className="text-sm text-muted-foreground">{status}</p>}
