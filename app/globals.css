@@ -110,3 +110,14 @@
 .dialog-header {
   text-align: left;
 }
+
+/* Logo */
+h1.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.warp-logo {
+  color: #ff9000;
+}
