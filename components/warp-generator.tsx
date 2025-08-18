@@ -24,6 +24,7 @@ export function WarpGenerator() {
   const [deviceType, setDeviceType] = useState<"computer" | "phone">("computer")
   const [isGenerated, setIsGenerated] = useState(false)
   const [isConfigOpen, setIsConfigOpen] = useState(false)
+  const [isConfigCopied, setIsConfigCopied] = useState(false)
 
   const generateConfig = async () => {
     setIsLoading(true)
@@ -59,6 +60,8 @@ export function WarpGenerator() {
   const copyConfig = () => {
     if (configData) {
       navigator.clipboard.writeText(atob(configData.configBase64))
+      setIsConfigCopied(true)
+      setTimeout(() => { setIsConfigCopied(false) }, 3000)
     }
   }
 
@@ -130,14 +133,14 @@ export function WarpGenerator() {
       {configData && isGenerated && (
         <div className="flex gap-2">
           <Button onClick={copyConfig} className="flex-[0.4]">
-            Скопировать
+            { ! isConfigCopied ? "Скопировать" : "✅ Скопировано" }
           </Button>
           <Button onClick={downloadConfig} className="flex-[0.35]">
             Скачать
           </Button>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" className="flex-[0.25]">
+              <Button className="flex-[0.25]">
                 QR
               </Button>
             </DialogTrigger>
