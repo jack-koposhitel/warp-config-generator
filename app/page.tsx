@@ -17,7 +17,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-6 w-[300px]">
           <h1 className="logo">Amnezia <span className="warp-logo">+&nbsp;WARP</span></h1>
           <WarpGenerator/>
-          <Accordion.Root type="single" collapsible>
+          <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
 			          <AccordionTrigger>Видео</AccordionTrigger>
               <AccordionContent>
@@ -26,7 +26,7 @@ export default function Home() {
                 </video>
               </AccordionContent>
             </AccordionItem>
-          </Accordion.Root>
+          </Accordion>
         </div>
       </main>
     </>
