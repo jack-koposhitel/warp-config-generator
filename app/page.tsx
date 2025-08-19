@@ -22,7 +22,7 @@ export default function Home() {
 			          <AccordionTrigger>Видео инструкция</AccordionTrigger>
               <AccordionContent>
                 <video width="300" controls>
-                  <source src="https://github.com/user-attachments/assets/25ca6193-7911-4b58-afc9-098f3dce9871" type="video/mp4" />
+                  <source src="https://github.com/user-attachments/assets/d2b87e56-f7ff-429e-b49c-07dbd798a37a" type="video/mp4" />
                 </video>
               </AccordionContent>
             </AccordionItem>
