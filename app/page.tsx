@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/accordion"
+import { Accordion } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { WarpGenerator } from "@/components/warp-generator"
 import { Analytics } from "@vercel/analytics/next"
