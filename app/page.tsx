@@ -1,5 +1,10 @@
 import Image from "next/image"
-import { Accordion } from "@/components/ui/accordion"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { WarpGenerator } from "@/components/warp-generator"
 import { Analytics } from "@vercel/analytics/next"
@@ -13,16 +18,14 @@ export default function Home() {
           <h1 className="logo">Amnezia <span className="warp-logo">+&nbsp;WARP</span></h1>
           <WarpGenerator/>
           <Accordion.Root type="single" collapsible>
-            <Accordion.Item value="item-1">
-              <Accordion.Header>
-			          <Accordion.Trigger>▶ Видео</Accordion.Trigger>
-              </Accordion.Header>
-              <Accordion.Content>
+            <AccordionItem value="item-1">
+			          <AccordionTrigger>Видео</AccordionTrigger>
+              <AccordionContent>
                 <video width="300" controls>
-                  <source src="https://github.com/user-attachments/assets/86df4274-9383-46bf-b9ea-4427ca021e9a" type="video/mp4"/>
+                  <source src="https://github.com/user-attachments/assets/86df4274-9383-46bf-b9ea-4427ca021e9a" type="video/mp4" />
                 </video>
-              </Accordion.Content>
-            </Accordion.Item>
+              </AccordionContent>
+            </AccordionItem>
           </Accordion.Root>
         </div>
       </main>
