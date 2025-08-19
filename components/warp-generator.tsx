@@ -89,7 +89,7 @@ export function WarpGenerator() {
     <div className="w-full space-y-4">
       <div className="flex items-center gap-2">
         <Button onClick={generateConfig} disabled={isLoading || isGenerated} className="flex-grow">
-          {isLoading ? "Генерация..." : "✨ Сгенерировать"}
+          {isLoading ? "⏳  Генерация…" : "✨  Сгенерировать"}
         </Button>
 
         {/*!isGenerated ? (
