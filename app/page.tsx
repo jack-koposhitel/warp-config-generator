@@ -18,7 +18,7 @@ export default function Home() {
       <Analytics/>
       <main className="flex min-h-screen flex-col items-center justify-center p-4 w-full">
         <div className="flex flex-col items-center justify-center gap-6 w-[300px]">
-          <h1 className="logo">Amnezia <span className="warp-logo">+&nbsp;WARP</span></h1>
+          <h1 className="logo">Amnezia <span className="warp-logo">+ WARP</span></h1>
           <WarpGenerator/>
           <div className="flex gap-2 w-full">
             <Button asChild variant="secondary" className="flex-1">
