@@ -21,19 +21,19 @@ export default function Home() {
           <h1 className="logo">Amnezia <span className="warp-logo">+&nbsp;WARP</span></h1>
           <WarpGenerator/>
           <div className="flex gap-2 w-full">
-            <Button asChild variant="secondary" className="flex-auto">
+            <Button asChild variant="secondary" className="flex-1">
               <a href="https://telegra.ph/Amnezia--WARP-08-19" target="_blank"><BookOpenText /> Инструкция</a>
             </Button>
-            <Button asChild variant="secondary" className="flex-auto">
+            <Button asChild variant="secondary" className="flex-1">
               <a href="https://github.com/user-attachments/assets/d2b87e56-f7ff-429e-b49c-07dbd798a37a" target="_blank"><Play /> Видео</a>
             </Button>
           </div>
           <div className="flex gap-2 w-full">
-            <Button asChild variant="secondary" className="flex-auto">
+            <Button asChild variant="secondary" className="flex-1">
               <a href={`${repoUrl}/discussions`} target="_blank"><MessageCircle/> Обсудить</a>
             </Button>
-            <Button asChild variant="secondary" className="flex-auto">
-              <a href={`${repoUrl}/issues`} target="_blank"><Bug/> Сообщить об ошибке</a>
+            <Button asChild variant="secondary" className="flex-1">
+              <a href={`${repoUrl}/issues`} target="_blank"><Bug/> Ошибка?</a>
             </Button>
           </div>
           <Button asChild variant="link" className="w-full">
