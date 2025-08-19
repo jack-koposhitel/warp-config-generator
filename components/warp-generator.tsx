@@ -10,6 +10,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import {
+  Check,
+  Copy,
+  Download,
+  QrCode
+} from "lucide-react"
 import { Settings, RefreshCw, X } from "lucide-react"
 import Image from "next/image"
 //import { ConfigOptions } from "./config-options"
@@ -83,7 +89,7 @@ export function WarpGenerator() {
     <div className="w-full space-y-4">
       <div className="flex items-center gap-2">
         <Button onClick={generateConfig} disabled={isLoading || isGenerated} className="flex-grow">
-          {isLoading ? "Генерация..." : "Сгенерировать"}
+          {isLoading ? "Генерация..." : "✨ Сгенерировать"}
         </Button>
 
         {/*!isGenerated ? (
@@ -133,15 +139,15 @@ export function WarpGenerator() {
       {configData && isGenerated && (
         <div className="flex gap-2">
           <Button onClick={copyConfig} className="flex-[0.4]">
-            { ! isConfigCopied ? "Скопировать" : "✅ Скопировано" }
+            { ! isConfigCopied ? ( <Copy /> Скопировать ) : ( <Check/> Скопировано ) }
           </Button>
           <Button onClick={downloadConfig} className="flex-[0.35]">
-            Скачать
+            <Download/> Скачать
           </Button>
           <Dialog>
             <DialogTrigger asChild>
               <Button className="flex-[0.25]">
-                QR
+                <QrCode/> QR
               </Button>
             </DialogTrigger>
             <DialogContent className="config-dialog sm:max-w-[425px]">
