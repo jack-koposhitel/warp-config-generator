@@ -137,30 +137,32 @@ export function WarpGenerator() {
 
       {status && <p className="text-sm text-muted-foreground">{status}</p>}
       {configData && isGenerated && (
-        <div className="flex gap-2">
-          <Button onClick={copyConfig} className="flex-[0.4]">
+        <>
+          <Button onClick={copyConfig} className="w-full">
             { ! isConfigCopied ? ( <span><Copy/> Скопировать</span> ) : ( <span><Check/> Скопировано</span> ) }
           </Button>
-          <Button onClick={downloadConfig} className="flex-[0.35]">
-            <Download/> Скачать
-          </Button>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="flex-[0.25]">
-                <QrCode/> QR
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="config-dialog sm:max-w-[425px]">
-              <DialogHeader className="dialog-header">
-                <DialogTitle>QR код конфигурации</DialogTitle>
-                <DialogDescription>Отсканируйте этот QR код для импорта конфигурации</DialogDescription>
-              </DialogHeader>
-              <div className="flex items-center justify-center">
-                <Image src={configData.qrCodeBase64 || "/placeholder.svg"} alt="QR Code" width={425} height={425} />
-              </div>
-            </DialogContent>
-          </Dialog>
-        </div>
+          <div className="flex gap-2">
+            <Button onClick={downloadConfig} className="flex-auto">
+              <Download/> Скачать
+            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="flex-auto">
+                  <QrCode/> QR
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="config-dialog sm:max-w-[425px]">
+                <DialogHeader className="dialog-header">
+                  <DialogTitle>QR код конфигурации</DialogTitle>
+                  <DialogDescription>Отсканируйте этот QR код для импорта конфигурации</DialogDescription>
+                </DialogHeader>
+                <div className="flex items-center justify-center">
+                  <Image src={configData.qrCodeBase64 || "/placeholder.svg"} alt="QR Code" width={425} height={425} />
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </>
       )}
     </div>
   )
