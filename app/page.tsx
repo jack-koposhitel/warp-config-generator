@@ -19,10 +19,10 @@ export default function Home() {
           <WarpGenerator/>
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-			          <AccordionTrigger>Видео</AccordionTrigger>
+			          <AccordionTrigger>Видео инструкция</AccordionTrigger>
               <AccordionContent>
                 <video width="300" controls>
-                  <source src="https://github.com/user-attachments/assets/86df4274-9383-46bf-b9ea-4427ca021e9a" type="video/mp4" />
+                  <source src="https://github.com/user-attachments/assets/25ca6193-7911-4b58-afc9-098f3dce9871" type="video/mp4" />
                 </video>
               </AccordionContent>
             </AccordionItem>
