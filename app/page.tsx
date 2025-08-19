@@ -12,16 +12,18 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-6 w-[300px]">
           <h1 className="logo">Amnezia <span className="warp-logo">+&nbsp;WARP</span></h1>
           <WarpGenerator/>
-          	<Accordion.Root type="single" collapsible>
-              <Accordion.Item className="AccordionItem" value="item-1">
-                <AccordionTrigger>Видео</AccordionTrigger>
-                <AccordionContent>
-                  <video width="300" controls>
-                    <source src="https://github.com/user-attachments/assets/86df4274-9383-46bf-b9ea-4427ca021e9a" type="video/mp4"/>
-                  </video>
-                </AccordionContent>
-              </Accordion.Item>
-            </Accordion.Root>
+          <Accordion.Root type="single" collapsible>
+            <Accordion.Item value="item-1">
+              <Accordion.Header>
+			          <Accordion.Trigger>▶ Видео</Accordion.Trigger>
+              </Accordion.Header>
+              <Accordion.Content>
+                <video width="300" controls>
+                  <source src="https://github.com/user-attachments/assets/86df4274-9383-46bf-b9ea-4427ca021e9a" type="video/mp4"/>
+                </video>
+              </Accordion.Content>
+            </Accordion.Item>
+          </Accordion.Root>
         </div>
       </main>
     </>
