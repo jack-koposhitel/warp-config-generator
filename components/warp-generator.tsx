@@ -139,7 +139,7 @@ export function WarpGenerator() {
       {configData && isGenerated && (
         <div className="flex gap-2">
           <Button onClick={copyConfig} className="flex-[0.4]">
-            { ! isConfigCopied ? ( <Copy /> Скопировать ) : ( <Check/> Скопировано ) }
+            { ! isConfigCopied ? ( <span><Copy/> Скопировать</span> ) : ( <span><Check/> Скопировано</span> ) }
           </Button>
           <Button onClick={downloadConfig} className="flex-[0.35]">
             <Download/> Скачать
