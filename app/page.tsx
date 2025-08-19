@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-6 w-[300px]">
           <h1 className="logo">Amnezia <span className="warp-logo">+&nbsp;WARP</span></h1>
           <WarpGenerator/>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-full">
             <Button asChild variant="secondary">
               <a href="https://telegra.ph/Amnezia--WARP-08-19" target="_blank"><BookOpenText /> Инструкция</a>
             </Button>
@@ -28,15 +28,17 @@ export default function Home() {
               <a href="https://github.com/user-attachments/assets/d2b87e56-f7ff-429e-b49c-07dbd798a37a" target="_blank"><Play /> Видео</a>
             </Button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-full">
             <Button asChild variant="secondary">
-              <a href="{repoUrl}/discussions" target="_blank"><MessageCircle/> Обсудить</a>
+              <a href={`${repoUrl}/discussions`} target="_blank"><MessageCircle/> Обсудить</a>
             </Button>
             <Button asChild variant="secondary">
-              <a href="{repoUrl}/issues" target="_blank"><Bug/> Сообщить об ошибке</a>
+              <a href={`${repoUrl}/issues`} target="_blank"><Bug/> Сообщить об ошибке</a>
             </Button>
           </div>
-          <a href="{repoUrl}" target="_blank"><Code/> Исходный код</a>
+          <Button asChild variant="link">
+            <a href={repoUrl} target="_blank"><Code/> Исходный код</a>
+          </Button>
         </div>
       </main>
     </>
