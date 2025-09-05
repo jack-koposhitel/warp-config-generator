@@ -8,13 +8,13 @@ import Script from "next/script"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "WARP конфигуратор - Генератор конфигураций WARP для обхода блокировок",
-  description: "Бесплатный генератор конфигураций WARP для Cloudflare. Создавайте конфиги для обхода блокировок сайтов, настройки VPN и доступа к заблокированным ресурсам. Поддержка всех устройств.",
-  keywords: "WARP, конфигуратор, генератор, VPN, обход блокировок, Cloudflare, конфиг, настройка, доступ к сайтам",
+  title: "Amnezia + WARP | Генератор конфигураций для обхода блокировок",
+  description: "Бесплатный генератор конфигураций WARP для подключения через Amnezia. Создавайте конфиги для настройки VPN, обхода блокировок сайтов и доступа к заблокированным ресурсам. Поддержка всех устройств: Android, iOS, Linux, macOS, Windows",
+  keywords: "Amnezia, WARP, VPN, конфиг, генератор, обход блокировок, AmneziaWG, Wireguard, Cloudflare, настройка, доступ к заблокированным сайтам, обход цензуры",
   authors: [{ name: "WARP Generator" }],
   openGraph: {
-    title: "WARP Конфигуратор - Генератор конфигураций WARP",
-    description: "Создавайте конфигурации WARP для обхода блокировок и доступа к заблокированным сайтам",
+    title: "Amnezia + WARP | Генератор конфигураций для обхода блокировок",
+    description: "Создавайте конфигурации Amnezia + WARP для обхода блокировок и доступа к заблокированным сайтам",
     type: "website",
     locale: "ru_RU",
   },
