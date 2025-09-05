@@ -13,8 +13,7 @@ import {
 import {
   Check,
   Copy,
-  Download,
-  QrCode
+  Download
 } from "lucide-react"
 import { Settings, RefreshCw, X } from "lucide-react"
 import Image from "next/image"
@@ -137,33 +136,15 @@ export function WarpGenerator() {
 
       {status && <p className="text-sm text-muted-foreground">{status}</p>}
       {configData && isGenerated && (
-        <>
+        <div className="flex gap-2">
           <Button onClick={copyConfig} className="w-full">
-            { ! isConfigCopied ? ( <Copy/> ) : ( <Check/> ) }
-            { ! isConfigCopied ? " Скопировать текстовый ключ" : " Скопировано" }
+          { ! isConfigCopied ? ( <Copy/> ) : ( <Check/> ) }
+          { ! isConfigCopied ? " Скопировать" : " Скопировано" }
           </Button>
-          <div className="flex gap-2">
-            <Button onClick={downloadConfig} className="flex-auto">
-              <Download/> Скачать файл
-            </Button>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="flex-auto">
-                  <QrCode/> QR
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="config-dialog sm:max-w-[425px]">
-                <DialogHeader className="dialog-header">
-                  <DialogTitle>QR код конфигурации</DialogTitle>
-                  <DialogDescription>Отсканируйте этот QR код для импорта конфигурации</DialogDescription>
-                </DialogHeader>
-                <div className="flex items-center justify-center">
-                  <Image src={configData.qrCodeBase64 || "/placeholder.svg"} alt="QR Code" width={425} height={425} />
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-        </>
+          <Button onClick={downloadConfig} className="flex-auto">
+            <Download/> Скачать
+          </Button>
+        </div>
       )}
     </div>
   )

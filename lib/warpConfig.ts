@@ -27,6 +27,7 @@ import {
 
 // Простая генерация QR кода через внешний сервис
 async function generateQRCode(text: string) {
+  /*
   try {
     const response = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=200x200&format=png&data=${encodeURIComponent(text)}`, {
       method: 'GET',
@@ -48,6 +49,7 @@ async function generateQRCode(text: string) {
   } catch (error) {
     console.log("QR generation via API failed:", error.message)
   }
+  */
   
   // Fallback SVG QR code placeholder
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" style="border: 1px solid #ccc;">
