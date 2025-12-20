@@ -8,13 +8,13 @@ import Script from "next/script"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Amnezia + WARP | Генератор конфигураций для обхода блокировок",
-  description: "Бесплатный генератор конфигураций WARP для подключения через Amnezia. Создавайте конфиги для настройки VPN, обхода блокировок сайтов и доступа к заблокированным ресурсам. Поддержка всех устройств: Android, iOS, Linux, macOS, Windows",
-  keywords: "Amnezia, WARP, VPN, конфиг, генератор, обход блокировок, AmneziaWG, Wireguard, Cloudflare, настройка, доступ к заблокированным сайтам, обход цензуры",
-  authors: [{ name: "WARP Generator" }],
+  title: "Бесплатный VPN: WARP + Amnezia | Генератор конфигураций для обхода блокировок",
+  description: "Генератор конфигураций WARP с маскирующим протоколом Amnezia. Создавайте конфиги для настройки VPN, обхода блокировок сайтов и доступа к заблокированным ресурсам. Поддержка Android, iOS, Linux, macOS, Windows",
+  keywords: "Amnezia, WARP, VPN, амнезия, варп, впн, конфиг, генератор, обход блокировок, обход цензуры, доступ к заблокированным сайтам, настройка, КВН, подкоп, config, AmneziaWG, AWG, Wireguard, Cloudflare",
+  authors: [{ name: "WARP + Amnezia" }],
   openGraph: {
-    title: "Amnezia + WARP | Генератор конфигураций для обхода блокировок",
-    description: "Создавайте конфигурации Amnezia + WARP для обхода блокировок и доступа к заблокированным сайтам",
+    title: "Бесплатный VPN: WARP + Amnezia | Генератор конфигураций для обхода блокировок",
+    description: "Создавайте конфигурации WARP с маскирующим протоколом Amnezia для обхода блокировок и доступа к заблокированным сайтам",
     type: "website",
     locale: "ru_RU",
   },
